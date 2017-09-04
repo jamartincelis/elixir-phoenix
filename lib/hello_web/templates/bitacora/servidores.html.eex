@@ -1,0 +1,111 @@
+<ol class="breadcrumb">
+	<li class="breadcrumb-item"><a href="#">Administraci&oacute;n</a></li>
+	<li class="breadcrumb-item active">Servidores</li>
+</ol>
+<div class="row">
+	<div class="col-md-3">
+			<h1 class="h1-margin">Servidores</h1>
+	</div>
+
+	<div class="col-md-4 pull-right">
+		<form class="form-inline" action="\create_user.html">
+			<div class="form-group">
+				<div class="pull-right">
+					<label for="exampleInputEmail2">Cliente: </label>
+					<select class="form-control">
+						<option>Seleccione</option>
+						<option>BBVA</option>
+						<option>BDV</option>
+						<option>BANESCO</option>
+						<option>CARONI</option>
+						<option>PROVINCIAL</option>
+					</select>
+				</div>
+			</div>
+		</form>
+		<div id="create_user">
+			<a class="btn btn-primary" href="create_servidor.html">Crear servidor</a>
+		</div>
+	</div>
+</div>
+<div class="table-responsive">
+	<table class="table table-bordered table-striped table-condensed">
+		 <tr>
+				<th>#</th>
+				<th>Servidor</th>
+				<th>IP</th>
+				<th>Puerto</th>
+				<th>Servicio</th>
+				<th>Cliente</th>
+				<th>Descripci&oacute;n</th>
+				<th>Status</th>
+				<th>Modificaciones</th>
+			</tr>
+			<tr>
+				<td>1</th>
+				<td>SMPP03</td>
+				<td>201.123.145.50</td>
+				<td>8000</td>
+				<td>ATM</td>
+				<td>BBVA</td>
+				<td>Descripci&oacute;n</td>
+				<td>Activo</td>
+				<td class="mod-link"><a href="#">Editar</a>&nbsp;<a href="#">Borrar</a></td>
+			</tr>
+			<tr>
+				<td>2</th>
+				<td>SMPP03</td>
+				<td>201.123.145.50</td>
+				<td>8001</td>
+				<td>ATM</td>
+				<td>BBVA</td>
+				<td>Descripci&oacute;n</td>
+				<td>Inactivo</td>
+				<td class="mod-link"><a href="#">Editar</a>&nbsp;<a href="#">Borrar</a></td>
+			</tr>
+			<tr>
+				<td>3</th>
+				<td>SMPP03</td>
+				<td>201.123.145.50</td>
+				<td>8001</td>
+				<td>POS</td>
+				<td>BDV</td>
+				<td>Descripci&oacute;n</td>
+				<td>Activo</td>
+				<td class="mod-link"><a href="#">Editar</a>&nbsp;<a href="#">Borrar</a></td>
+			</tr>
+			<tr>
+				<td>4</th>
+				<td>SMPP03</td>
+				<td>201.123.145.50</td>
+				<td>8000</td>
+				<td>ATM-POS</td>
+				<td>BANESCO</td>
+				<td>Descripci&oacute;n</td>
+				<td>Activo</td>
+				<td class="mod-link"><a href="#">Editar</a>&nbsp;<a href="#">Borrar</a></td>
+			</tr>
+			<tr>
+				<td>5</th>
+				<td>SMPP06</td>
+				<td>201.126.167.50</td>
+				<td>8000</td>
+				<td>ATM</td>
+				<td>CARONI</td>
+				<td>Descripci&oacute;n</td>
+				<td>Activo</td>
+				<td class="mod-link"><a href="#">Editar</a>&nbsp;<a href="#">Borrar</a></td>
+			</tr>
+			<tr>
+				<td>6</th>
+				<td>SMPP03</td>
+				<td>201.123.145.50</td>
+				<td>8000</td>
+				<td>POS</td>
+				<td>INDUSTRIAL</td>
+				<td>Descripci&oacute;n</td>
+				<td>Activo</td>
+				<td class="mod-link"><a href="#">Editar</a>&nbsp;<a href="#">Borrar</a></td>
+			</tr>
+		</table>
+</div>

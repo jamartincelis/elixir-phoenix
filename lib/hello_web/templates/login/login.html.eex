@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Total Texto | Monitor Web 1</title>
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+		<link rel="stylesheet" href="<%= static_path(@conn, "/css/custom_login.css") %>">
+
+  </head>
+
+  <body>
+    <div class="container">
+      <form class="form-signin" method="post" action="bitacora">
+				<div class="img-form-signin">
+					<img alt="Brand" src="images/logo_resize.jpg">
+				</div>
+        <label for="inputUser" class="sr-only">Usuario</label>
+        <input type="text" name="username" id="inputUser" class="form-control" placeholder="Usuario" required="" autofocus="">
+        <label for="inputPassword" class="sr-only">Clave</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Clave" required=""><br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+      </form>
+
+    </div> <!-- /container -->
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>
