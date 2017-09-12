@@ -1,0 +1,42 @@
+<%= if get_flash(@conn, :info) do %>
+  <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+<% end %>
+
+<h2>Listing Servidores</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Servidor</th>
+      <th>Ip</th>
+      <th>Puerto</th>
+      <th>Servicio</th>
+      <th>Cliente</th>
+      <th>Descripcion</th>
+      <th>Status</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for servidor <- @servidores do %>
+    <tr>
+      <td><%= servidor.servidor %></td>
+      <td><%= servidor.ip %></td>
+      <td><%= servidor.puerto %></td>
+      <td><%= servidor.servicio %></td>
+      <td><%= servidor.cliente %></td>
+      <td><%= servidor.descripcion %></td>
+      <td><%= servidor.status %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: servidor_path(@conn, :show, servidor), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: servidor_path(@conn, :edit, servidor), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: servidor_path(@conn, :delete, servidor), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Servidor", to: servidor_path(@conn, :new) %></span>

@@ -1,7 +1,7 @@
-defmodule Hello.Cliente do
+defmodule Hello.Clientes.Cliente do
   use Ecto.Schema
   import Ecto.Changeset
-  alias Hello.Cliente
+  alias Hello.Clientes.Cliente
 
 
   schema "clientes" do

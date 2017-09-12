@@ -1,0 +1,38 @@
+<%= if get_flash(@conn, :info) do %>
+  <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+<% end %>
+
+<h2>Listing Usuarios</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Usuario</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Perfil</th>
+      <th>Status</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for usuario <- @usuarios do %>
+    <tr>
+      <td><%= usuario.usuario %></td>
+      <td><%= usuario.nombre %></td>
+      <td><%= usuario.apellido %></td>
+      <td><%= usuario.perfil %></td>
+      <td><%= usuario.status %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: usuario_path(@conn, :show, usuario), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: usuario_path(@conn, :edit, usuario), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: usuario_path(@conn, :delete, usuario), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Usuario", to: usuario_path(@conn, :new) %></span>

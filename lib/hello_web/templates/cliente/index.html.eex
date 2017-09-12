@@ -1,0 +1,36 @@
+<%= if get_flash(@conn, :info) do %>
+  <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+<% end %>
+
+<h2>Listing Clientes</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Numero</th>
+      <th>Status</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for cliente <- @clientes do %>
+    <tr>
+      <td><%= cliente.nombre %></td>
+      <td><%= cliente.descripcion %></td>
+      <td><%= cliente.numero %></td>
+      <td><%= cliente.status %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: cliente_path(@conn, :show, cliente), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: cliente_path(@conn, :edit, cliente), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: cliente_path(@conn, :delete, cliente), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Cliente", to: cliente_path(@conn, :new) %></span>

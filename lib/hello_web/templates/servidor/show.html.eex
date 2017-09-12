@@ -1,0 +1,47 @@
+<%= if get_flash(@conn, :info) do %>
+  <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+<% end %>
+
+<h2>Show Servidor</h2>
+
+<ul>
+
+  <li>
+    <strong>Servidor:</strong>
+    <%= @servidor.servidor %>
+  </li>
+
+  <li>
+    <strong>Ip:</strong>
+    <%= @servidor.ip %>
+  </li>
+
+  <li>
+    <strong>Puerto:</strong>
+    <%= @servidor.puerto %>
+  </li>
+
+  <li>
+    <strong>Servicio:</strong>
+    <%= @servidor.servicio %>
+  </li>
+
+  <li>
+    <strong>Cliente:</strong>
+    <%= @servidor.cliente %>
+  </li>
+
+  <li>
+    <strong>Descripcion:</strong>
+    <%= @servidor.descripcion %>
+  </li>
+
+  <li>
+    <strong>Status:</strong>
+    <%= @servidor.status %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: servidor_path(@conn, :edit, @servidor) %></span>
+<span><%= link "Back", to: servidor_path(@conn, :index) %></span>

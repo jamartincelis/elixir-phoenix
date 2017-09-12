@@ -19,12 +19,15 @@ defmodule HelloWeb.Router do
     get "/", LoginController, :login
     get "/index", LoginController, :login
     get "/bitacora", BitacoraController, :index
-    get "/bitacora/admin/clientes", BitacoraController, :clientes
-    get "/bitacora/admin/servidores", BitacoraController, :servidores
     get "/bitacora/estadisticas/total-sms", BitacoraController, :totalSms
-    get "/bitacora/seguridad/usuarios", BitacoraController, :usuarios
     get "/logout", BitacoraController, :logout
-
+    resources "/bitacora/admin/clientes", ClienteController
+		resources "/bitacora/admin/servidores", ServidorController
+    resources "/bitacora/seguridad/usuarios", UsuarioController
+    
+    #get "/bitacora/admin/clientes", BitacoraController, :clientes
+    #get "/bitacora/admin/servidores", BitacoraController, :servidores
+    #get "/bitacora/seguridad/usuarios", BitacoraController, :usuarios
     #get "/", PageController, :index
     #get "/hello", HelloController, :index
     #get "/login", LoginController, :login

@@ -1,0 +1,37 @@
+<%= if get_flash(@conn, :info) do %>
+  <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+<% end %>
+
+<h2>Show Usuario</h2>
+
+<ul>
+
+  <li>
+    <strong>Usuario:</strong>
+    <%= @usuario.usuario %>
+  </li>
+
+  <li>
+    <strong>Nombre:</strong>
+    <%= @usuario.nombre %>
+  </li>
+
+  <li>
+    <strong>Apellido:</strong>
+    <%= @usuario.apellido %>
+  </li>
+
+  <li>
+    <strong>Perfil:</strong>
+    <%= @usuario.perfil %>
+  </li>
+
+  <li>
+    <strong>Status:</strong>
+    <%= @usuario.status %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: usuario_path(@conn, :edit, @usuario) %></span>
+<span><%= link "Back", to: usuario_path(@conn, :index) %></span>

@@ -1,0 +1,32 @@
+<%= if get_flash(@conn, :info) do %>
+  <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+<% end %>
+
+<h2>Show Cliente</h2>
+
+<ul>
+
+  <li>
+    <strong>Nombre:</strong>
+    <%= @cliente.nombre %>
+  </li>
+
+  <li>
+    <strong>Descripcion:</strong>
+    <%= @cliente.descripcion %>
+  </li>
+
+  <li>
+    <strong>Numero:</strong>
+    <%= @cliente.numero %>
+  </li>
+
+  <li>
+    <strong>Status:</strong>
+    <%= @cliente.status %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: cliente_path(@conn, :edit, @cliente) %></span>
+<span><%= link "Back", to: cliente_path(@conn, :index) %></span>
